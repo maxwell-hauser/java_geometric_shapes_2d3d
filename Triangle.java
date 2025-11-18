@@ -55,14 +55,19 @@ public class Triangle {
 	
 	public double getPerimeter()
 	{
-		return side1 + side2 + side3;
+		double a = getSide1();
+		double b = getSide2();
+		double c = getSide3();
+		return a + b + c;
 	}
 	
 	public double getArea()
 	{
-		S = (side1 + side2 + side3)/2;
-		
-		return Math.sqrt((S*(S-side1)*(S-side2)*(S-side3)));
+		double a = getSide1();
+		double b = getSide2();
+		double c = getSide3();
+		double s = (a + b + c)/2.0;
+		return Math.sqrt(s * (s - a) * (s - b) * (s - c));
 	}
 	
 	public void getAttributes()

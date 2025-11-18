@@ -27,12 +27,12 @@ public class Diamond {
 
 	public double getPerimeter()
 	{
-		return (Math.sqrt(Math.pow(width/2, 2) + Math.pow(height/2, 2)))*4;
+		return Math.sqrt(Math.pow(width/2.0, 2) + Math.pow(height/2.0, 2)) * 4;
 	}
 	
 	public double getArea()
 	{
-		return width * height / 2;
+		return (width * height) / 2.0;
 	}
 	
 	public void getAttributes()

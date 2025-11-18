@@ -53,7 +53,7 @@ public class TriangularPrism {
 	public double getS() {return S = (getSide1() + getSide2() + getSide3())/2;}
 	public double getArea() {return A = Math.sqrt(getS()*(S-side1)*(S-side2)*(S-side3));}
 	public double getSurface() {return ((2*getArea()) + (side1 * h) + (side2 * h) + (side3 * h));}
-	public double getVolume() {return A * h;}
+	public double getVolume() {return getArea() * h;}
 	
 	public void getAttributes()
 	{
