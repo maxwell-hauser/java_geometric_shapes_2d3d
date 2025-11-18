@@ -5,7 +5,7 @@
 
     <groupId>com.hauser</groupId>
     <artifactId>geometric-shapes-2d3d</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>Geometric Shapes 2D/3D</name>
