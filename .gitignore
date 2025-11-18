@@ -1,0 +1,13 @@
+*.class
+*.jar
+
+.DS_Store
+Thumbs.db
+.idea/
+.project
+.classpath
+.settings/
+bin/
+out/
+target/
+dependency-reduced-pom.xml

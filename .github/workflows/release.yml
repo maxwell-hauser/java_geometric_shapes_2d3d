@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: Compile Java source
+      run: javac GeometricShapes2D3D.java Line.java Triangle.java Rectangle.java Diamond.java Cube.java TriangularPrism.java
+
+    - name: Package JAR
+      run: jar --create --file geometric-shapes-2d3d-${{ github.ref_name }}.jar --main-class GeometricShapes2D3D *.class
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: geometric-shapes-2d3d-${{ github.ref_name }}.jar
+        generate_release_notes: true
