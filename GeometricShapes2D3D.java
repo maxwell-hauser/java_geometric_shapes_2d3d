@@ -26,7 +26,7 @@ public class GeometricShapes2D3D {
                 + "___________________________________________________\n"
                 + "                                 7) Exit\n"
                 + "___________________________________________________\n",
-                "CSC 229 - Project 05 - Shapes", JOptionPane.INFORMATION_MESSAGE);
+                "Geometric Shapes", JOptionPane.INFORMATION_MESSAGE);
             
             if (!(receivedValidInput = seriesSelection0.matches("[1-7]"))) {
                 JOptionPane.showMessageDialog(null, 
